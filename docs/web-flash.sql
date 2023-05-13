@@ -760,3 +760,19 @@ CREATE TABLE `t_test_girl` (
 -- ----------------------------
 -- Records of t_test_girl
 -- ----------------------------
+
+DROP TABLE IF EXISTS `t_sys_buy`;
+CREATE TABLE `t_sys_buy` (
+     `id` bigint(20) NOT NULL AUTO_INCREMENT,
+     `create_by` bigint(20) DEFAULT NULL COMMENT '创建人',
+     `create_time` datetime DEFAULT CURRENT_TIMESTAMP() COMMENT '创建时间/注册时间',
+     `modify_by` bigint(20) DEFAULT NULL COMMENT '最后更新人',
+     `modify_time` datetime DEFAULT NULL COMMENT '最后更新时间',
+     `is_check` tinyint(1) DEFAULT 0 COMMENT '是否审核：0待审核 1已审核',
+     `is_delete` tinyint(1) DEFAULT 0 COMMENT '是否删除：0未删除 1已删除',
+     `buy_code` int(11) DEFAULT NULL COMMENT '购买编码',
+     `buy_count` int(11) DEFAULT NULL COMMENT '购买金额',
+     `buy_id` varchar(64) DEFAULT NULL COMMENT '购买人编号',
+     `buy_name` varchar(64) DEFAULT NULL COMMENT '购买人名称',
+     PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='购买信息表';
