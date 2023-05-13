@@ -15,6 +15,7 @@ export default {
     loginLog: 'Login Log',
     log: 'Bussiness Log',
     cfg: 'Config',
+    buy: 'Buy',
     banner: 'Banner',
     article: 'Article',
     editArticle: 'Edit Article',

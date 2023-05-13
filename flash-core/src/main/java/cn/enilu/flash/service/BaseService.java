@@ -52,6 +52,11 @@ public abstract class BaseService<T, ID extends Serializable, R extends BaseRepo
     }
 
     @Override
+    public List<T> batchInsert(List<T> record) {
+        return dao.saveAll(record);
+    }
+
+    @Override
     @Cacheable(value = Cache.APPLICATION, key = "#root.targetClass.simpleName+':'+#id")
     public T get(ID id) {
         return dao.getOne(id);

@@ -22,6 +22,7 @@ export default {
     loginLog: '登录日志',
     log: '业务日志',
     cfg: '参数管理',
+    buy: '购买管理',
     druid: '监控管理',
     swagger: '接口文档',
     messageMgr: '消息管理',
@@ -58,6 +59,7 @@ export default {
     add: '添加',
     edit: '修改',
     delete: '删除',
+    check: '审核',
     view: '查看',
     deploy: '部署',
     search: '搜索',
@@ -81,7 +83,9 @@ export default {
   },
   common: {
     mustSelectOne: '请选中操作项!',
-    deleteConfirm: '你确认删除该记录？',
+    checked: '该购买记录已审核!',
+    deleteConfirm: '你确认删除该购买记录？',
+    checkConfirm: '你确认通过该购买记录？',
     tooltip: '提示',
     warning: '警告',
     optionSuccess: '操作成功',
@@ -123,6 +127,21 @@ export default {
     nameInput: '请输入参数名',
     valueInput: '请输入参数值',
     lengthValidation: '长度在 2 到 20 个字符'
+  },
+  buy: {
+    data: '购买信息',
+    id: '购买人编号',
+    name: '购买人名称',
+    count:'购买金额',
+    code:'购买编码',
+    createTime:'购买日期',
+    add: '添加购买',
+    edit: '编辑购买',
+    check: '购买信息核查',
+    nameInput: '请输入参数名',
+    valueInput: '请输入参数值',
+    lengthValidation: '长度在 2 到 20 个字符',
+    lengthValidationBuyData: '长度在 2 到 200 个字符',
   },
   workflow: {
     startProcessInstance: '发起申请'
