@@ -28,7 +28,7 @@
     <!--列表-->
     <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row
               @current-change="handleCurrentChange">
-      <el-table-column label="ID">
+      <el-table-column label="序号">
         <template slot-scope="scope">
           {{scope.row.id}}
         </template>
@@ -58,7 +58,7 @@
           {{scope.row.createTime}}
         </template>
       </el-table-column>
-      <el-table-column label="操作">
+      <el-table-column label="操作" width=“40%”>
         <template slot-scope="scope">
           <el-button type="text" size="mini" icon="el-icon-edit" v-if="!scope.row.isCheck" @click.native="editItem(scope.row)" v-permission="['/buy/update']">{{ $t('button.edit') }}</el-button>
           <el-button type="text" size="mini" icon="el-icon-edit" v-if="!scope.row.isCheck" @click.native="checkItem(scope.row)" v-permission="['/buy/check']">{{ $t('button.check') }}</el-button>
@@ -132,28 +132,22 @@
                     @current-change="handleCurrentChange">
             <el-table-column :label="$t('buy.code')">
               <template slot-scope="scope">
-                {{scope.row.buyCode}}
+                <el-input v-model="scope.row.buyCode"></el-input>
               </template>
             </el-table-column>
             <el-table-column :label="$t('buy.count')">
               <template slot-scope="scope">
-                {{scope.row.buyCount}}
+                <el-input v-model="scope.row.buyCount"></el-input>
               </template>
             </el-table-column>
             <el-table-column :label="$t('buy.id')">
               <template slot-scope="scope">
-                {{scope.row.buyId}}
+                <el-input v-model="scope.row.buyId"></el-input>
               </template>
             </el-table-column>
             <el-table-column :label="$t('buy.name')">
               <template slot-scope="scope">
-                {{scope.row.buyName}}
-              </template>
-            </el-table-column>
-            <el-table-column label="操作">
-              <template slot-scope="scope">
-                <el-button type="text" size="mini" icon="el-icon-edit" @click.native="editItem(scope.row)" v-permission="['/buy/update']">{{ $t('button.edit') }}</el-button>
-                <el-button type="text" size="mini" icon="el-icon-delete" @click.native="removeItem(scope.row)" v-permission="['/buy/delete']">{{ $t('button.delete') }}</el-button>
+                <el-input v-model="scope.row.buyName"></el-input>
               </template>
             </el-table-column>
           </el-table>
