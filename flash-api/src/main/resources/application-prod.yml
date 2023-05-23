@@ -1,19 +1,22 @@
 debug: true
 spring:
   datasource:
-    druid:
-      url: jdbc:mysql://my-db:3306/webflash?useUnicode=true&characterEncoding=UTF8&useSSL=false
-      username: webflash
-      password: webflash190602@ABC
-  jpa:
-    hibernate:
+    url: jdbc:mysql://localhost:3306/web-flash?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: root
+    password: e3bcc23babeaa016
+  #jpa:
+    #hibernate:
       ## 生产环境建议去掉改配置
-      ddl-auto: create
+      #ddl-auto: create
   activiti:
+    #    配置为true的时候自动检查resources/bpmn/目录下的工作流定义文件并部署到数据库表中
     check-process-definitions: false
+    #    启动的时候配置为true初始化工作流相关表
+    #database-schema-update: update
     database-schema-update: update
     history-level: full
     db-history-used: true
+    #process-definition-location-prefix: classpath:/bpmn/
 server:
   tomcat:
     basedir: /data/app/web-flash/runtime/tmp/
