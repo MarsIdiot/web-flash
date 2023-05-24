@@ -32,7 +32,7 @@ import java.util.List;
  * CfgController
  *
  * @author enilu
- * @version 2018/11/17 0017
+ * @version 2018/11/17  0017
  */
 @RestController
 @RequestMapping("/buy")
