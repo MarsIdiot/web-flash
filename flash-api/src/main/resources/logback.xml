@@ -17,6 +17,7 @@
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 <!--			<fileNamePattern>/data/app/web-flash/runtime/log/api_%d{yyyy-MM-dd}.log</fileNamePattern>-->
 			<fileNamePattern>/Users/zhoutianlang/IdeaProjects/app/web-flash/runtime/log/api_%d{yyyy-MM-dd}.log</fileNamePattern>
+<!--			<fileNamePattern>/home/Logs/web-flash/api_%d{yyyy-MM-dd}.log</fileNamePattern>-->
 			<maxHistory>1000</maxHistory>
 		</rollingPolicy>
 		<encoder>
